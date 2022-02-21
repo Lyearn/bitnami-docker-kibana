@@ -20,5 +20,5 @@ start_command=("${KIBANA_BIN_DIR}/kibana" "serve")
 if am_i_root; then
     exec gosu "$KIBANA_DAEMON_USER" "${start_command[@]}"
 else
-    exec "${start_command[@]}" "-v"
+    exec "${start_command[@]}"
 fi
